@@ -1,8 +1,6 @@
 package com.myprojects.springdemo;
 
-public interface Coach {
-	
-	public String getDailyWorkout();
+public interface Advice {
 	
 	public String getAdvice();
 	
