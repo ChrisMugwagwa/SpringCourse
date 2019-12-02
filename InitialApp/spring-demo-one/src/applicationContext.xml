@@ -8,6 +8,8 @@
 		<property name="rootLoggerLevel" value="FINE" />
 		<property name="printedLoggerLevel" value="FINE" />
 	</bean>
+	
+	<context:property-placeholder location="classpath:sports.properties"/>
 
 	<!-- define the dependency -->
 	<bean id="theHoroscope" 
@@ -27,12 +29,30 @@
 	</bean>
 	-->
 	
-	
-	<!-- Setter Injection -->
+	<!-- Setter Injection 
 	<bean id="myCoach"
 		class="com.myprojects.springdemo.FootballCoach">
 		<property name="statistics" ref="theStatistic"/>
 	</bean>
+	-->
+	
+	<!-- Setter Injection with inputted fields" 
+	<bean id="myCoach" 
+		class="com.myprojects.springdemo.BoxingCoach">
+			<property name="statisticalAdvice" ref="theStatistic"/>
+			<property name="email" value="boxing@coach.com"/>
+			<property name="age" value="27"/>
+	</bean>
+	-->
+	
+	<!--Setter injection with values from a properties file -->
+	<bean id="myCoach"
+		class="com.myprojects.springdemo.BoxingCoach">
+			<property name="statisticalAdvice" ref="theStatistic"/>
+			<property name="email" value="${boxing.email}"/>
+			<property name="age" value="${boxing.age}"/>
+	</bean>
+			
 	
 
 </beans>

@@ -6,4 +6,5 @@ public interface Coach {
 	
 	public String getAdvice();
 	
+	public String getInformation();
 }

@@ -5,7 +5,8 @@ public class BasketballCoach implements Coach {
 	private Advice horoscope;
 	
 	public BasketballCoach(HoroscopeAdvice theHoroscope) {
-		horoscope = theHoroscope;
+		this.horoscope = theHoroscope;
+		System.out.println("Inside arg constructor");
 	}
 	
 	@Override
@@ -16,6 +17,12 @@ public class BasketballCoach implements Coach {
 		
 	public String getAdvice() {
 		return horoscope.getAdvice();
+	}
+
+	@Override
+	public String getInformation() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

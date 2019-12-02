@@ -5,11 +5,12 @@ public class FootballCoach implements Coach {
 	Advice statistics;
 	
 	public FootballCoach() {
-		
+		System.out.println("Inside no-arg constructor");
 	}
 	
 	public void setStatistics(Advice myStatistic) {
-		statistics = myStatistic;
+		this.statistics = myStatistic;
+		System.out.println("Inside Setter Method");
 	}
 	
 	@Override
@@ -26,6 +27,12 @@ public class FootballCoach implements Coach {
 		want an this class to have an implementation for this method
 		*/
 		return statistics.getAdvice();
+	}
+
+	@Override
+	public String getInformation() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
