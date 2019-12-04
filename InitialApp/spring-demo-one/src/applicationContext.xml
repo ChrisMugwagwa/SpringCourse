@@ -47,7 +47,8 @@
 	
 	<!--Setter injection with values from a properties file -->
 	<bean id="myCoach"
-		class="com.myprojects.springdemo.BoxingCoach">
+		class="com.myprojects.springdemo.BoxingCoach"
+		scope="prototype">
 			<property name="statisticalAdvice" ref="theStatistic"/>
 			<property name="email" value="${boxing.email}"/>
 			<property name="age" value="${boxing.age}"/>
